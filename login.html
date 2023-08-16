@@ -2,14 +2,17 @@
 <html>
 <head>
 <link rel="stylesheet" href="login-style.css">
-<title> CSS Login Screen Tutorial </title>
+<title>MintBid</title>
 </head>
 <body>
+    <div>
+      <img src = "images/login.png" style="height: 400px; width: 400px;">
+    </div>
     <div class="login-page">
       <div class="form">
         <div class="login">
           <div class="login-header">
-            <h3>LOGIN</h3>
+            <h3 style="font-style: bold; text-align: center;">LOGIN</h3>
             <p>Please enter your credentials to login.</p>
           </div>
         </div>
@@ -21,10 +24,11 @@
             <input type="password" id="password" name="password" required><br><br>
             
           <button>login</button>
-          <p class="message">Not registered? <a href="newAccount.html">Create an account</a></p>
+          <p class="message" style="float: right; font-size: 15px;">Not registered? <a href="newAccount.html" >Create an account</a></p>
         </form>
         <div class="errorMessage" id="errorMessage">
       </div>
+    </div>
     </div>
     <script src="login.js"></script>
 </body>

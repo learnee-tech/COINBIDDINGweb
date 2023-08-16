@@ -4,14 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="sell.css">
-    <title>Add Coin to Auction</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap" rel="stylesheet">
+    <title>MintBid</title>
 </head>
 <body>
-    <header>
-        <h1>Add Coin to Auction</h1>
-    </header>
-    <main>
-        <form id="coin-form">
+    <section class="section1">
+        <div class="topnav">
+            <div class = container_homelogo>
+                <a class="active" href="index.html" ><img src = "images/home.png" rel="icon" type="image" style="height: 40px;"></a>
+            </div>
+            <a href="sell.html">Sell</a>
+            <a href="buy.html">Buy</a>
+            <a href="#history">History</a>
+            <a href="http://127.0.0.1:5500/index.html#contact">Contact</a>
+            <a href="http://127.0.0.1:5500/index.html#about">About</a> 
+            <a class = "user" href="profile.html" >
+              <img src = "images/user-removebg-preview.png" rel="icon" type="image" style=" height: 40px;"></a>
+          </div>
+    </section>
+    <div>
+        <p style="font-family: 'Comfortaa', cursive;
+        font-family: 'Jost', sans-serif; font-size: 30px; color: bisque; text-align: center;
+        ">
+            Add your Coin to the auction.
+        </p>
+        <br>
+        <p style="font-family: 'Comfortaa', cursive;
+        font-family: 'Jost', sans-serif; font-size: 30px; color: bisque; text-align: center;
+        ">
+            Click on the coin to add your coin!
+        </p>
+    </div>
+    <div class="container">
+        <img src="images/coin1-removebg-preview.png" alt="Image" id="clickable-image">
+        <div class="form-container" id="form-container">
+          <form id="coin-form">
             <label for="coin-title">Coin Title:</label>
             <input type="text" id="coin-title" name="coin-title" required><br><br>
 
@@ -22,14 +50,30 @@
             <input type="number" id="starting-price" name="starting-price" min="1" step="0.01" required><br><br>
 
             <label for="coin-image">Coin Image:</label>
-            <input type="file" id="coin-image" name="coin-image" accept="image/*" required><br><br>
+            <input type="file" id="coin-image" name="coin-image" accept="image/*" ><br><br>
 
             <button type="submit">Add Coin to Auction</button>
-        </form>
-    </main>
-    <footer>
-        <p>&copy; 2023 Coin Bidding</p>
-    </footer>
-    <script src="script.js"></script>
+            </form>
+        </div>
+    </div>
+    <script>
+        const clickableImage = document.getElementById('clickable-image');
+        const formContainer = document.getElementById('form-container');
+        const container = document.getElementById('container');
+        const form = document.getElementById('coin-form');
+        clickableImage.addEventListener('click', () => {
+        formContainer.style.display = 'block';
+        });
+        form.addEventListener('submit', (event) => {
+        event.preventDefault(); // Prevent form submission
+        formContainer.style.display = 'none';
+        alert("Your coin added successfully!");
+        });
+       
+        document.addEventListener('click', (event) => {
+            if(container == event.target) {
+                formContainer.style.display = 'none';}});
+        
+    </script>
 </body>
 </html>

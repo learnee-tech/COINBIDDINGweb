@@ -1,29 +1,59 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Comfortaa', cursive;
+    font-family: 'Jost', sans-serif;
     margin: 0;
     padding: 0;
-}
+    background-color: rgb(51, 51, 51);
+  }
 
-header {
-    background-color: #bec0c2;
-    color: white;
+.topnav {
+    overflow: hidden;
+    position: relative;
+    top: 20px;
+   background: linear-gradient(45deg, rgba(255, 215, 0, 0.2), rgba(255, 165, 0, 0.7));}
+  
+  /* Style the links inside the navigation bar */
+  .topnav a {
+    float: left;
+    color: black;
     text-align: center;
-    padding: 10px;
+    padding: 10px 16px 0px 20px;
+    text-decoration: none;
+    font-family: 'Comfortaa', cursive;
+    font-family: 'Jost', sans-serif;
+    font-size: 20px;
+  }
+  
+  /* Change the color of links on hover */
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  /* Add a color to the active/current link */
+  .topnav a.active {
+    background-color: #000000;
+    color: white;
+  }
+  * {box-sizing:border-box}
+.topnav a.user{
+  position:relative; 
+  float:right; 
 }
 
-main {
-    max-width: 600px;
-    margin: 20px auto;
-    padding: 20px;
+.coin-form {
+    margin: 20px;
+    padding: 0;
     border: 1px solid #ccc;
     border-radius: 5px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
 
 form label {
     display: block;
     margin-bottom: 5px;
     font-weight: bold;
+    float: left;
 }
 
 form input[type="text"],
@@ -39,7 +69,7 @@ form input[type="file"] {
 
 form button {
     padding: 10px 20px;
-    background-color: #ccd0d3;
+    background-color: #bd300d;
     color: white;
     border: none;
     border-radius: 4px;
@@ -49,3 +79,25 @@ form button {
 form button:hover {
     background-color: #898a8b;
 }
+.container {
+    position: relative;
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  #clickable-image {
+    cursor: pointer;
+  }
+  
+  .form-container {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 750px;
+    width: 750px;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  }
