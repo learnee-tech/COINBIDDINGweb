@@ -11,26 +11,117 @@
 <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Jost&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="header">
+    <section class="section1">
       <div class="topnav">
-        <div class = container1>
-       <a class="active" href="index.html" ><img src = "images/home.png" rel="icon" type="image" style="height: 40px;"></a>
-        </div>
-          <a href="#add_ur_coin">Sell</a>
-          <a href="#bid">Buy</a>
+          <div class = container_homelogo>
+              <a class="active" href="index.html" ><img src = "images/home.png" rel="icon" type="image" style="height: 40px;"></a>
+          </div>
+          <a href="sell.html">Sell</a>
+          <a href="buy.html">Buy</a>
           <a href="#history">History</a>
           <a href="#contact">Contact</a>
           <a href="#about">About</a> 
-          <a class = "login" href="login.html">Login</a>        
+          <div class = container_loginlogo>
+            <a class = "login" href="login.html">Login
+            <img src = "images\login.png" rel="icon" type="image" style="height: 29px;"></a>
+          </div>
         </div>
-    </div>
-    <div>
-      <p id="website-name">MintBid</p>
-    </div>
-    
-    <footer>
-      <p>Author: Hege Refsnes</p>
-      <p><a href="mailto:hege@example.com">hege@example.com</a></p>
-    </footer> 
+        <div>
+          <p id="website-name">MintBid</p>
+        </div>
+        <div style="font-size: 40px; color: rgb(250, 246, 246); text-align: center; padding-top: 34%; font-family: 'Comfortaa', cursive;
+        font-family: 'Jost', sans-serif;"><p>Best Deals Around..</p></div>
+    </section>
+
+    <section class="coins-display">
+      <div class="flip-card" >
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="images/coin1-removebg-preview.png" style="height: 200px;">
+          </div>
+          <div class="flip-card-back">
+            <h1>US Antique Coin</h1> 
+            <p>made up of special method, 100 yr old.</p> 
+            <p>Highest Bid Price: $5000</p>
+          </div>
+        </div>
+      </div>
+      <div class="flip-card" >
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="images/coin4-removebg-preview.png" style="height: 200px;">
+          </div>
+          <div class="flip-card-back">
+            <h1>Liberty Coin</h1> 
+            <p>made up of special method, 200 yr old.</p> 
+            <p>Highest Bid Price: $5600</p>
+          </div>
+        </div>
+      </div>
+      <div class="flip-card" >
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="images/coin1-removebg-preview.png" style="height: 200px;">
+          </div>
+          <div class="flip-card-back">
+            <h1>US Antique Coin type2</h1> 
+            <p>made up of special method, 100 yr old.</p> 
+            <p>Highest Bid Price: $5034</p>
+          </div>
+        </div>
+      </div>
+      <div class="flip-card" >
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="images/coin4-removebg-preview.png" style="height: 200px;">
+          </div>
+          <div class="flip-card-back">
+            <h1>Liberty Coin</h1> 
+            <p>made up of special method, 200 yr old.</p> 
+            <p>Highest Bid Price: $6000</p>
+          </div>
+        </div>
+      </div>
+      <div class="flip-card" >
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="images/coin1-removebg-preview.png" style="height: 200px;">
+          </div>
+          <div class="flip-card-back">
+            <h1>US Antique Coin</h1> 
+            <p>made up of special method</p> 
+            <p>Highest Bid Price: $6080</p>
+          </div>
+        </div>
+      </div>
+      </section>
+
+
+      <section class="contact-section" id="contact">
+        <div>
+          <h2>Contact <br>Us</h2>
+        </div>
+        <div>
+          <p>If you have any questions or inquiries, feel free to get in touch with us.</p>
+          <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+      
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+      
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+      
+            <button type="submit">Submit</button>
+          </form>
+      </div>
+      </section>
+      <section class="about-us" id="about">
+        <div>
+          <p style="font-size: 40px; padding-top: 130px; color: rgb(250, 246, 246); text-align: center; font-family: 'Comfortaa', cursive;
+          font-family: 'Jost', sans-serif;">Know more about us.</p>
+        </div>
+      </section> 
 </body>
 </html>
