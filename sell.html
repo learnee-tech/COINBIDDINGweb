@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="sell.css">
+    <title>Add Coin to Auction</title>
+</head>
+<body>
+    <header>
+        <h1>Add Coin to Auction</h1>
+    </header>
+    <main>
+        <form id="coin-form">
+            <label for="coin-title">Coin Title:</label>
+            <input type="text" id="coin-title" name="coin-title" required><br><br>
+
+            <label for="coin-description">Coin Description:</label>
+            <textarea id="coin-description" name="coin-description" rows="4" required></textarea><br><br>
+
+            <label for="starting-price">Starting Price:</label>
+            <input type="number" id="starting-price" name="starting-price" min="1" step="0.01" required><br><br>
+
+            <label for="coin-image">Coin Image:</label>
+            <input type="file" id="coin-image" name="coin-image" accept="image/*" required><br><br>
+
+            <button type="submit">Add Coin to Auction</button>
+        </form>
+    </main>
+    <footer>
+        <p>&copy; 2023 Coin Bidding</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

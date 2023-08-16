@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy Coin - Coin Bidding Website</title>
+    <link rel="stylesheet" type="text/css" href="buystyle.css">
+
+</head>
+<body>
+    <header>
+        <h1>Coin Bidding Website</h1>
+    </header>
+    <nav>
+        <a href="#">Home</a> | <a href="#">Browse Coins</a> | <a href="#">Sell Coin</a>
+    </nav>
+    <label for="filter">Filter</label>
+    <select id="filter" name="coin">
+        <option value="time">Time Remained </option>
+        <option value="bid">Bid</option>
+    </select>
+
+    
+    <div class="container">
+        <div class="coin">
+            <img src="bitcoin.png" alt="Coin 1">
+            <div class="coin-info">
+            <h2>Bitcoin</h2>
+            <p>A coin with a rich history.</p>
+            <p>Starting Bid: $100</p>
+            <button id="openPopupBtn">Place Bid</button>
+            </div>
+        </div>
+        <div class="coin">
+            <img src="litecoin.jpg" alt="Coin 2">
+            <div class="coin-info">
+            <h2>Litecoin</h2>
+            <p>A rare coin.</p>
+            <p>Starting Bid: $150</p>
+            <button>Place Bid</button>
+            </div>
+        </div>
+        <div class="coin">
+            <img src="ripple.jpg" alt="Coin 1">
+            <div class="coin-info">
+            <h2>Ripple</h2>
+            <p>A coin with a rich history.</p>
+            <p>Starting Bid: $100</p>
+            <button>Place Bid</button>
+            </div>
+        </div>
+        <div class="coin">
+            <img src="litecoin.jpg" alt="Coin 1">
+            <div class="coin-info">
+            <h2>Ethereum</h2>
+            <p>A coin with a rich history.</p>
+            <p>Starting Bid: $100</p>
+            <button>Place Bid</button>
+            </div>
+        </div>
+
+        <div class="popup" id="popup">
+            <div class="popup-content">
+                <span class="close-btn" id="closePopupBtn">&times;</span>
+                <h2>Place Your Bid<h2>
+            <input type="text" id="inputValue">
+            <button id="closePopupContentBtn">Submit</button>
+            </div>
+        </div>
+n
+    </div>
+
+    <script>
+        const openPopupBtn = document.getElementById('openPopupBtn');
+        const closePopupBtn = document.getElementById('closePopupBtn');
+        const closePopupContentBtn = document.getElementById('closePopupContentBtn');
+        const popup = document.getElementById('popup');
+
+        openPopupBtn.addEventListener('click', () => {
+            popup.style.display = 'flex';
+        });
+
+        closePopupBtn.addEventListener('click', () => {
+            popup.style.display = 'none';
+        });
+
+        closePopupContentBtn.addEventListener('click', () => {
+            popup.style.display = 'none';
+        });
+    </script>
+</body>
+</html>
