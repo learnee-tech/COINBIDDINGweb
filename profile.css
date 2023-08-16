@@ -1,0 +1,71 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.user-profile {
+    position: relative;
+}
+
+.profile-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.profile-dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+.profile-menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.profile-menu li {
+    padding: 8px 16px;
+    border-bottom: 1px solid #ccc;
+}
+
+.profile-menu li:last-child {
+    border-bottom: none;
+}
+/* Add this to your existing styles */
+.user-profile img {
+    width: 32px; /* Adjust the size as needed */
+    height: 32px;
+    border-radius: 50%; /* Make the image circular */
+    margin-right: 8px; /* Add some space between the image and username */
+}
+
+.user-info img {
+    width: 64px; /* Adjust the size as needed */
+    height: 64px;
+    border-radius: 50%; /* Make the image circular */
+    margin-bottom: 10px; /* Add some space between the image and username */
+}
+
+
+/* Show the dropdown when the button is clicked */
+.show {
+    display: block;
+}
