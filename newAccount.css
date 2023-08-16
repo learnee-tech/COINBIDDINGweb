@@ -1,0 +1,109 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+
+.SIGN_UP_DETAILS {
+  width: 100%;
+  padding: 8% 0 0;
+  margin: auto;
+}
+.SIGN_UP_DETAILS .form .signup_form{
+  margin-top: -31px;
+margin-bottom: 26px;
+}
+.form {
+  position: relative;
+  z-index: 1;
+  background: #FFFFFF;
+  max-width: 700px;
+  margin: 0 auto 100px;
+  padding: 45px;
+  /* text-align: center; */
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+.form input {
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  background: #f2f2f2;
+  width: fit-content;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+.form button {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background-color: #e36565;
+  background-image: linear-gradient(45deg,#b43d3d,#c72121);
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+.form .message {
+  margin: 15px 0 0;
+  color: #b3b3b3;
+  font-size: 12px;
+}
+.form .message a {
+  color: #af4c4c;
+  text-decoration: none;
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+body {
+  background-color: #e36565;
+  opacity: 40px;
+  background-image: linear-gradient(45deg,#b43d3d,#c72121);
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ... previous CSS styles ... */
+
+.name-fields {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.name-field {
+    flex-basis: calc(50% - 10px);
+}
+
+.dob-occupation-country {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.dob-field,
+.occupation-field,
+.country-field {
+    flex-basis: calc(33.33% - 10px);
+}
+
+.usernamePassword {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.username-field,
+.password-field,
+.confirm-password-field {
+    flex-basis: calc(33.33% - 10px);
+}

@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Buy Coin - Coin Bidding Website</title>
     <link rel="stylesheet" type="text/css" href="buystyle.css">
-
 </head>
 <body>
     <header>
@@ -16,76 +15,116 @@
     </nav>
     <label for="filter">Filter</label>
     <select id="filter" name="coin">
-        <option value="time">Time Remained </option>
+        <option value="time">Time Remained</option>
         <option value="bid">Bid</option>
     </select>
-
     
     <div class="container">
         <div class="coin">
-            <img src="bitcoin.png" alt="Coin 1">
+            <img src="bitcoin.jpg" alt="Coin 1">
             <div class="coin-info">
-            <h2>Bitcoin</h2>
-            <p>A coin with a rich history.</p>
-            <p>Starting Bid: $100</p>
-            <button id="openPopupBtn">Place Bid</button>
+                <h2>Bitcoin</h2>
+                <p>A coin with a rich history.</p>
+                <p>Starting Bid: $100</p>
+                <button class="openPopupBtn">Place Bid</button>
+            </div>
+            <div class="popup">
+                <div class="popup-content">
+                    <span class="close-btn closePopupBtn">&times;</span>
+                    <h2>Place Your Bid</h2>
+                    <input type="text" class="inputValue">
+                    <span class="error-message inputValue-error"></span><br><br>
+                    <button class="closePopupContentBtn">Submit</button>
+                </div>
             </div>
         </div>
         <div class="coin">
             <img src="litecoin.jpg" alt="Coin 2">
             <div class="coin-info">
-            <h2>Litecoin</h2>
-            <p>A rare coin.</p>
-            <p>Starting Bid: $150</p>
-            <button>Place Bid</button>
+                <h2>Litecoin</h2>
+                <p>A rare coin.</p>
+                <p>Starting Bid: $150</p>
+                <button class="openPopupBtn">Place Bid</button>
+            </div>
+            <div class="popup">
+                <div class="popup-content">
+                    <span class="close-btn closePopupBtn">&times;</span>
+                    <h2>Place Your Bid</h2>
+                    <input type="text" class="inputValue">
+                    <span class="error-message inputValue-error"></span><br><br>
+                    <button class="closePopupContentBtn">Submit</button>
+                </div>
             </div>
         </div>
         <div class="coin">
-            <img src="ripple.jpg" alt="Coin 1">
+            <img src="ethereum.jpg" alt="Coin 3">
             <div class="coin-info">
-            <h2>Ripple</h2>
-            <p>A coin with a rich history.</p>
-            <p>Starting Bid: $100</p>
-            <button>Place Bid</button>
+                <h2>Ethereum</h2>
+                <p>A rare coin.</p>
+                <p>Starting Bid: $150</p>
+                <button class="openPopupBtn">Place Bid</button>
+            </div>
+            <div class="popup">
+                <div class="popup-content">
+                    <span class="close-btn closePopupBtn">&times;</span>
+                    <h2>Place Your Bid</h2>
+                    <input type="text" class="inputValue">
+                    <span class="error-message inputValue-error"></span><br><br>
+                    <button class="closePopupContentBtn">Submit</button>
+                </div>
             </div>
         </div>
         <div class="coin">
-            <img src="litecoin.jpg" alt="Coin 1">
+            <img src="ripple.jpg" alt="Coin 4">
             <div class="coin-info">
-            <h2>Ethereum</h2>
-            <p>A coin with a rich history.</p>
-            <p>Starting Bid: $100</p>
-            <button>Place Bid</button>
+                <h2>Ripple</h2>
+                <p>A rare coin.</p>
+                <p>Starting Bid: $150</p>
+                <button class="openPopupBtn">Place Bid</button>
+            </div>
+            <div class="popup">
+                <div class="popup-content">
+                    <span class="close-btn closePopupBtn">&times;</span>
+                    <h2>Place Your Bid</h2>
+                    <input type="text" class="inputValue">
+                    <span class="error-message inputValue-error"></span><br><br>
+                    <button class="closePopupContentBtn">Submit</button>
+                </div>
             </div>
         </div>
-
-        <div class="popup" id="popup">
-            <div class="popup-content">
-                <span class="close-btn" id="closePopupBtn">&times;</span>
-                <h2>Place Your Bid<h2>
-            <input type="text" id="inputValue">
-            <button id="closePopupContentBtn">Submit</button>
-            </div>
-        </div>
-n
+        <!-- Add similar sections for other coins -->
     </div>
 
     <script>
-        const openPopupBtn = document.getElementById('openPopupBtn');
-        const closePopupBtn = document.getElementById('closePopupBtn');
-        const closePopupContentBtn = document.getElementById('closePopupContentBtn');
-        const popup = document.getElementById('popup');
+        const openPopupBtns = document.querySelectorAll('.openPopupBtn');
+        const closePopupBtns = document.querySelectorAll('.closePopupBtn');
+        const closePopupContentBtns = document.querySelectorAll('.closePopupContentBtn');
+        const popups = document.querySelectorAll('.popup');
+        const inputValues = document.querySelectorAll('.inputValue');
+        const inputValueErrors = document.querySelectorAll('.inputValue-error');
 
-        openPopupBtn.addEventListener('click', () => {
-            popup.style.display = 'flex';
+        openPopupBtns.forEach((btn, index) => {
+            btn.addEventListener('click', () => {
+                popups[index].style.display = 'flex';
+            });
         });
 
-        closePopupBtn.addEventListener('click', () => {
-            popup.style.display = 'none';
+        closePopupBtns.forEach((btn, index) => {
+            btn.addEventListener('click', () => {
+                popups[index].style.display = 'none';
+            });
         });
 
-        closePopupContentBtn.addEventListener('click', () => {
-            popup.style.display = 'none';
+        closePopupContentBtns.forEach((btn, index) => {
+            btn.addEventListener('click', () => {
+                const bidAmount = inputValues[index].value.trim();
+                if (!/^\d+$/.test(bidAmount)) {
+                    inputValueErrors[index].textContent = 'Please enter a valid number.';
+                    return;
+                }
+                inputValueErrors[index].textContent = '';
+                popups[index].style.display = 'none';
+            });
         });
     </script>
 </body>

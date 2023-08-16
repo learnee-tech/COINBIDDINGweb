@@ -106,3 +106,9 @@
             right: 10px;
             cursor: pointer;
         }
+       
+        .error-message {
+            font-size: 14px; /* Adjust the font size as needed */
+            color: red;
+        }
+   

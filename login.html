@@ -5,7 +5,6 @@
 <title> CSS Login Screen Tutorial </title>
 </head>
 <body>
-  <body>
     <div class="login-page">
       <div class="form">
         <div class="login">
@@ -14,14 +13,19 @@
             <p>Please enter your credentials to login.</p>
           </div>
         </div>
-        <form class="login-form">
-          <input type="text" placeholder="username"/>
-          <input type="password" placeholder="password"/>
+        <form class="loginForm">
+          <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            <span id="username-error" class="error-message"></span><br><br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required><br><br>
+            
           <button>login</button>
-          <p class="message">Not registered? <a href="new-account.html">Create an account</a></p>
+          <p class="message">Not registered? <a href="newAccount.html">Create an account</a></p>
         </form>
+        <div class="errorMessage" id="errorMessage">
       </div>
     </div>
-</body>
+    <script src="login.js"></script>
 </body>
 </html>
